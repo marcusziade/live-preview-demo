@@ -5,32 +5,10 @@
 //  Created by Marcus Ziadé on 11.5.2021.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-
-    // MARK: - Types
-
-    private enum Section {
-        case numbers
-    }
-
-    // MARK: - Properties
-
-    private var numbers = Array(1...100)
-    private var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
-
-    // MARK: - UI Components
-
-    private let collectionView: UICollectionView = {
-        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        let layout = UICollectionViewCompositionalLayout.list(using: config)
-        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    // MARK: - Lifecycle
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +26,23 @@ class ViewController: UIViewController {
         configureDataSource()
     }
 
-    // MARK: - Methods
+
+    // MARK: - Private
+
+    private enum Section {
+        case numbers
+    }
+
+    private var numbers = Array(1...100)
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
+
+    private let collectionView: UICollectionView = {
+        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        let layout = UICollectionViewCompositionalLayout.list(using: config)
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     private func configureDataSource() {
 
@@ -61,11 +55,10 @@ class ViewController: UIViewController {
             cell.backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
         }
 
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(
-            collectionView: collectionView,
-            cellProvider: { collectionView, indexPath, item -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
+            collectionView, indexPath, item -> UICollectionViewCell? in
                 return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
-            })
+            }
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.numbers])
