@@ -14,6 +14,7 @@
 		5A26C0BA264AD965009C5DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A26C0B8264AD965009C5DE6 /* LaunchScreen.storyboard */; };
 		5A26C0C4264AD990009C5DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26C0C3264AD990009C5DE6 /* ViewController.swift */; };
 		5A26C0CB264ADB0D009C5DE6 /* LivePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26C0CA264ADB0D009C5DE6 /* LivePreview.swift */; };
+		5ABC9EFD285CD32B006E10C8 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC9EFC285CD32B006E10C8 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5A26C0BB264AD965009C5DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A26C0C3264AD990009C5DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A26C0CA264ADB0D009C5DE6 /* LivePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePreview.swift; sourceTree = "<group>"; };
+		5ABC9EFC285CD32B006E10C8 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				5A26C0AD264AD964009C5DE6 /* AppDelegate.swift */,
+				5ABC9EFC285CD32B006E10C8 /* Cell.swift */,
 				5A26C0AF264AD964009C5DE6 /* SceneDelegate.swift */,
 				5A26C0C3264AD990009C5DE6 /* ViewController.swift */,
 				5A26C0CA264ADB0D009C5DE6 /* LivePreview.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				5A26C0C4264AD990009C5DE6 /* ViewController.swift in Sources */,
 				5A26C0AE264AD964009C5DE6 /* AppDelegate.swift in Sources */,
+				5ABC9EFD285CD32B006E10C8 /* Cell.swift in Sources */,
 				5A26C0CB264ADB0D009C5DE6 /* LivePreview.swift in Sources */,
 				5A26C0B0264AD964009C5DE6 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,6 +299,7 @@
 				DEVELOPMENT_TEAM = P4DQK6SRKR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "live-preview-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +321,7 @@
 				DEVELOPMENT_TEAM = P4DQK6SRKR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "live-preview-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
