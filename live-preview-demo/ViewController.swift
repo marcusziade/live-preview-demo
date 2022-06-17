@@ -72,9 +72,8 @@ final class ViewController: UIViewController {
 import SwiftUI
 
 struct ViewController_Preview: PreviewProvider {
-    static var previews: some View = Preview(
-        for: ViewController()
-    )
+    static var previews: some View = Preview(for: ViewController())
+        .preferredColorScheme(.dark)
 }
 
 #endif
