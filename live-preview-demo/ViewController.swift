@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  live-preview-demo
-//
-//  Created by Marcus Ziadé on 11.5.2021.
-//
-
 import Foundation
 import UIKit
 
@@ -77,4 +70,6 @@ struct ViewController_Preview: PreviewProvider {
 }
 
 #endif
+
+
 

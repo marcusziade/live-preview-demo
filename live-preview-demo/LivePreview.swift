@@ -1,10 +1,3 @@
-//
-//  LivePreview.swift
-//  live-preview-demo
-//
-//  Created by Marcus Ziadé on 11.5.2021.
-//
-
 import SwiftUI
 
 struct Preview: View {
@@ -63,5 +56,7 @@ private struct PreviewView<ViewType: UIView>: UIViewRepresentable {
     func makeUIView(context: Context) -> ViewType { view }
     func updateUIView(_ uiView: ViewType, context: Context) {}
 }
+
+
 
 

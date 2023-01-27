@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  live-preview-demo
-//
-//  Created by Marcus Ziadé on 11.5.2021.
-//
-
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -24,3 +17,5 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 }
+
+
